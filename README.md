@@ -17,6 +17,13 @@
     live "/users/:id", UserLive.Show, :show
     live "/users/:id/show/edit", UserLive.Show, :edit
 
+  * Added checkboxes to the user form.
+  * Navigate to:
+    http://localhost:4000/users/1/edit
+
+    Note the checkboxes require double input (when changing, or clicking the box the second time.)
+    The checkbox validation fires twice.
+
 
 To start your Phoenix server:
 
