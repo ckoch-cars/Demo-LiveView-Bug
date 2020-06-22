@@ -21,8 +21,9 @@ defmodule TestLvCheckboxWeb.UserLive.FormComponent do
   end
 
   @impl true
-  def handle_event("validate", %{"user" => user_params}, socket) do
+  def handle_event("validate", %{"user" => user_params} = params, socket) do
     IO.inspect("were in VALIDATE")
+    IO.inspect(params)
 
     changeset =
       socket.assigns.user

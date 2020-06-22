@@ -8,22 +8,22 @@
 
   <%= label f, :email %>
   <%= text_input f, :email %>
-  <%= checkbox f, :email_checkbox, checked: !!@changeset.data.email %>
+  <%= checkbox f, :email_checkbox, checked: !!Map.get(@changeset.changes, :email) %>
   <%= error_tag f, :email %>
 
   <%= label f, :username %>
   <%= text_input f, :username %>
-  <%= checkbox f, :username_checkbox, checked: !!@changeset.data.username %>
+  <%= checkbox f, :username_checkbox, checked: !!Map.get(@changeset.changes, :username) %>
   <%= error_tag f, :username %>
 
   <%= label f, :number %>
   <%= number_input f, :number %>
-  <%= checkbox f, :number_checkbox, checked: !!@changeset.data.number %>
+  <%= checkbox f, :number_checkbox, checked: !!Map.get(@changeset.changes, :number) %>
   <%= error_tag f, :number %>
 
   <%= label f, :description %>
   <%= text_input f, :description %>
-  <%= checkbox f, :description_checkbox, checked: !!@changeset.data.description %>
+  <%= checkbox f, :description_checkbox, checked: !!Map.get(@changeset.changes, :description) %>
   <%= error_tag f, :description %>
 
   <%= submit "Save", phx_disable_with: "Saving..." %>
